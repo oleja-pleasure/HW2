@@ -51,7 +51,7 @@ public class CheckForm<string> {
         $(byText(Hobby1)).click();
         $(byText(Hobby2)).click();
         $(byText(Hobby3)).click();
-        $(byId("uploadPicture")).sendKeys("C:\\Users\\olegp\\Desktop\\auto qa\\"+File);
+        $(byId("uploadPicture")).sendKeys("C:\\Users\\olegp\\Desktop\\auto qa\\HW#2\\src\\Test\\resources\\"+File);
         $(byId("currentAddress")).setValue(Addr);
         $(byId("submit")).scrollTo();
         $(byCssSelector("#state")).click();
