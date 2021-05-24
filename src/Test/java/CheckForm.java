@@ -38,39 +38,39 @@ public class CheckForm<string> {
         String City = "Panipat";
 
 
-        $(byId("firstName")).setValue(Fn);
-        $(byId("lastName")).setValue(Ln);
-        $(byId("userEmail")).setValue(Email);
+        $("#firstName").setValue(Fn);
+        $("#lastName").setValue(Ln);
+        $("#userEmail").setValue(Email);
         $(byText(Gender)).click();
-        $(byId("userNumber")).setValue(Mobile);
-        $(byId("dateOfBirthInput")).click();
+        $("#userNumber").setValue(Mobile);
+        $("#dateOfBirthInput").click();
         $(byText(MonthOfBirth)).click();
         $(byText(YearOfBirth)).click();
         $(byText(DayOfBirth)).click();
-        $(byCssSelector("#subjectsInput")).setValue("SuBjEcT");
+        $("#subjectsInput").setValue("SuBjEcT");
         $(byText(Hobby1)).click();
         $(byText(Hobby2)).click();
         $(byText(Hobby3)).click();
-        $(byId("uploadPicture")).sendKeys("C:\\Users\\olegp\\Desktop\\auto qa\\HW#2\\src\\Test\\resources\\"+File);
-        $(byId("currentAddress")).setValue(Addr);
-        $(byId("submit")).scrollTo();
-        $(byCssSelector("#state")).click();
+        $("#uploadPicture").sendKeys("C:\\Users\\olegp\\Desktop\\auto qa\\HW#2\\src\\Test\\resources\\"+File);
+        $("#currentAddress").setValue(Addr);
+        $("#submit").scrollTo();
+        $("#state").click();
         $(byText(State)).click();
-        $(byCssSelector("#city")).click();
+        $("#city").click();
         $(byText(City)).click();
-        $(byId("submit")).click();
+        $("#submit").click();
 
-        $(byCssSelector(".table-responsive tbody tr:nth-child(1) td:nth-child(2)")).shouldHave(text(Fn+' '+Ln));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(2) td:nth-child(2)")).shouldHave(text(Email));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(3) td:nth-child(2)")).shouldHave(text(Gender));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(4) td:nth-child(2)")).shouldHave(text(Mobile));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(5) td:nth-child(2)")).shouldHave(text(DayOfBirth+' '+MonthOfBirth+','+YearOfBirth));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(6) td:nth-child(2)")).shouldBe(empty);
-        $(byCssSelector(".table-responsive tbody tr:nth-child(7) td:nth-child(2)")).shouldHave(text(Hobby1+", "+Hobby2+", "+Hobby3));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(8) td:nth-child(2)")).shouldHave(text(File));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(9) td:nth-child(2)")).shouldHave(text(Addr));
-        $(byCssSelector(".table-responsive tbody tr:nth-child(10) td:nth-child(2)")).shouldHave(text(State+" "+City));
-        $(byId("closeLargeModal")).click();
+        $(".table-responsive tbody tr:nth-child(1) td:nth-child(2)").shouldHave(text(Fn+' '+Ln));
+        $(".table-responsive tbody tr:nth-child(2) td:nth-child(2)").shouldHave(text(Email));
+        $(".table-responsive tbody tr:nth-child(3) td:nth-child(2)").shouldHave(text(Gender));
+        $(".table-responsive tbody tr:nth-child(4) td:nth-child(2)").shouldHave(text(Mobile));
+        $(".table-responsive tbody tr:nth-child(5) td:nth-child(2)").shouldHave(text(DayOfBirth+' '+MonthOfBirth+','+YearOfBirth));
+        $(".table-responsive tbody tr:nth-child(6) td:nth-child(2)").shouldBe(empty);
+        $(".table-responsive tbody tr:nth-child(7) td:nth-child(2)").shouldHave(text(Hobby1+", "+Hobby2+", "+Hobby3));
+        $(".table-responsive tbody tr:nth-child(8) td:nth-child(2)").shouldHave(text(File));
+        $(".table-responsive tbody tr:nth-child(9) td:nth-child(2)").shouldHave(text(Addr));
+        $(".table-responsive tbody tr:nth-child(10) td:nth-child(2)").shouldHave(text(State+" "+City));
+
     }
 
     @AfterAll
